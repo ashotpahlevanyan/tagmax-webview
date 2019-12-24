@@ -1,2 +1,89 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900');
 
+@mixin font-face( $font-name, $font-path, // path + file name. Ex : path/to/font/filename
+$font-weight: 400, $font-style: normal, $support-required: 'oldie') {
+  @font-face {
+    font-family: $font-name;
+    font-style : $font-style;
+    font-weight: $font-weight;
+    @if $support-required=='oldie' {
+      src: url('#{$font-path}.eot');
+      src: url('#{$font-path}.eot?#iefix') format('embedded-opentype');
+      src: url('#{$font-path}.woff2') format('woff2');
+      src: url('#{$font-path}.woff') format('woff');
+      src: url('#{$font-path}.ttf') format('truetype');
+    }
+    @if $support-required=='recent' {
+      src: url('#{$font-path}.woff2') format('woff2');
+      src: url('#{$font-path}.woff') format('woff');
+      src: url('#{$font-path}.ttf') format('truetype');
+    }
+    @if $support-required=='modern' {
+      src: url('#{$font-path}.woff2') format('woff2');
+      src: url('#{$font-path}.woff') format('woff');
+    }
+  }
+  @if $support-required !='oldie' and $support-required !='recent' and $support-required !='modern' {
+    @error 'Invalid support-required value. Must be "oldie"==>IE8 and above/ Android native browser 4+/ Safari 4.3 OR "recent"==>IE9+/ Android native browser 4.0+/ Safari 4.3+ OR "modern"==>IE9+/ Android native browser 4.4+/ Safari 5.1+';
+  }
+}
+
+/* ==== Local Fonts ====
+*/
+
+/* --- Stag Font --- */
+/*
+@include font-face("Stag-Black", "../fonts/Stag-Black", 400, normal, "oldie");
+@include font-face("Stag-BlackItalic", "../fonts/Stag-BlackItalic", 400, normal, "oldie");
+@include font-face("Stag-Bold", "../fonts/Stag-Bold", 400, normal, "oldie");
+@include font-face("Stag-BoldItalic", "../fonts/Stag-BoldItalic", 400, normal, "oldie");
+@include font-face("Stag-Book", "../fonts/Stag-Book", 400, normal, "oldie");
+@include font-face("Stag-BookItalic", "../fonts/Stag-BookItalic", 400, normal, "oldie");
+@include font-face("Stag-Light", "../fonts/Stag-Light", 400, normal, "oldie");
+@include font-face("Stag-LightItalic", "../fonts/Stag-LightItalic", 400, normal, "oldie");
+@include font-face("Stag-Medium", "../fonts/Stag-Medium", 400, normal, "oldie");
+@include font-face("Stag-MediumItalic", "../fonts/Stag-MediumItalic", 400, normal, "oldie");
+@include font-face("Stag-Semibold", "../fonts/Stag-Semibold", 400, normal, "oldie");
+@include font-face("Stag-SemiboldItalic", "../fonts/Stag-SemiboldItalic", 400, normal, "oldie");
+@include font-face("Stag-Thin", "../fonts/Stag-Thin", 400, normal, "oldie");
+@include font-face("Stag-ThinItalic", "../fonts/Stag-ThinItalic", 400, normal, "oldie");
+
+!* --- Stag-Sans Font --- *!
+@include font-face("StagSans-Black", "../fonts/StagSans-Black", 400, normal, "oldie");
+@include font-face("StagSans-BlackItalic", "../fonts/StagSans-BlackItalic", 400, normal, "oldie");
+@include font-face("StagSans-Bold", "../fonts/StagSans-Bold", 400, normal, "oldie");
+@include font-face("StagSans-BoldItalic", "../fonts/StagSans-BoldItalic", 400, normal, "oldie");
+@include font-face("StagSans-Book", "../fonts/StagSans-Book", 400, normal, "oldie");
+@include font-face("StagSans-BookItalic", "../fonts/StagSans-BookItalic", 400, normal, "oldie");
+@include font-face("StagSans-Light", "../fonts/StagSans-Light", 400, normal, "oldie");
+@include font-face("StagSans-LightItalic", "../fonts/StagSans-LightItalic", 400, normal, "oldie");
+@include font-face("StagSans-Medium", "../fonts/StagSans-Medium", 400, normal, "oldie");
+@include font-face("StagSans-MediumItalic", "../fonts/StagSans-MediumItalic", 400, normal, "oldie");
+@include font-face("StagSans-Semibold", "../fonts/StagSans-Semibold", 400, normal, "oldie");
+@include font-face("StagSans-SemiboldItalic", "../fonts/StagSans-SemiboldItalic", 400, normal, "oldie");
+@include font-face("StagSans-Thin", "../fonts/StagSans-Thin", 400, normal, "oldie");
+@include font-face("StagSans-ThinItalic", "../fonts/StagSans-ThinItalic", 400, normal, "oldie");
+
+
+!* --- Montserrat Font --- *!
+@include font-face("Montserrat-Black", "../fonts/Montserrat-Black", 400, normal, "oldie");
+@include font-face("Montserrat-BlackItalic", "../fonts/Montserrat-BlackItalic", 400, normal, "oldie");
+@include font-face("Montserrat-Bold", "../fonts/Montserrat-Bold", 400, normal, "oldie");
+@include font-face("Montserrat-BoldItalic", "../fonts/Montserrat-BoldItalic", 400, normal, "oldie");
+@include font-face("Montserrat-ExtraBold", "../fonts/Montserrat-ExtraBold", 400, normal, "oldie");
+@include font-face("Montserrat-ExtraBoldItalic", "../fonts/Montserrat-ExtraBoldItalic", 400, normal, "oldie");
+@include font-face("Montserrat-ExtraLight", "../fonts/Montserrat-ExtraLight", 400, normal, "oldie");
+@include font-face("Montserrat-ExtraLightItalic", "../fonts/Montserrat-ExtraLightItalic", 400, normal, "oldie");
+@include font-face("Montserrat-Italic", "../fonts/Montserrat-Italic", 400, normal, "oldie");
+@include font-face("Montserrat-Regular", "../fonts/Montserrat-Regular", 400, normal, "oldie");
+@include font-face("Montserrat-ExtraLightItalic", "../fonts/Montserrat-ExtraLightItalic", 400, normal, "oldie");
+@include font-face("Montserrat-Light", "../fonts/Montserrat-Light", 400, normal, "oldie");
+@include font-face("Montserrat-LightItalic", "../fonts/Montserrat-LightItalic", 400, normal, "oldie");
+@include font-face("Montserrat-Medium", "../fonts/Montserrat-Medium", 400, normal, "oldie");
+@include font-face("Montserrat-MediumItalic", "../fonts/Montserrat-MediumItalic", 400, normal, "oldie");
+@include font-face("Montserrat-SemiBold", "../fonts/Montserrat-SemiBold", 400, normal, "oldie");
+@include font-face("Montserrat-SemiBoldItalic", "../fonts/Montserrat-SemiBoldItalic", 400, normal, "oldie");
+@include font-face("Montserrat-Thin", "../fonts/Montserrat-Thin", 400, normal, "oldie");
+@include font-face("Montserrat-ThinItalic", "../fonts/Montserrat-ThinItalic", 400, normal, "oldie");
+*/
+

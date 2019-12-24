@@ -1,7 +1,16 @@
+//@import "reset";
 @import "~bootstrap/scss/bootstrap";
 
 @import "fonts";
 @import "variables";
+@import "colors";
+@import "margins";
+@import "paddings";
+
+@import "base";
+
+@import "wrappers";
+@import "components";
 
 body {
   background: #fff;
