@@ -1,5 +1,28 @@
 .usersList {
-  a {
-
+  .usersTable {
+    &.responsive {
+      display: none;
+    }
   }
 }
+
+@media (max-width: $screen-xs-max) {
+  .usersList {
+    .usersTable {
+      display: none;
+      &.responsive {
+        display: table;
+
+        td {
+          &:last-child {
+            text-align: right;
+          }
+          &.text-center {
+            text-align: right !important;
+          }
+        }
+      }
+    }
+  }
+}
+

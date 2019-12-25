@@ -43,7 +43,8 @@
     "bootstrap": "^4.4.1",
     "bootstrap-select": "^1.13.12",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.6"
+    "popper.js": "^1.14.6",
+    "stacktable.js": "^1.0.3"
   },
   "directories": {
     "doc": "docs"
