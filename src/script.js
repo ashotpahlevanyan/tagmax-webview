@@ -3,4 +3,6 @@ $(document).ready(function(){
     $('.usersTable').stacktable({myClass:'responsive'});
 
     $('#usersTable').DataTable();
+
+    //$('#fileupload').fileupload();
 });
