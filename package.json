@@ -42,6 +42,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "bootstrap": "^4.4.1",
     "bootstrap-select": "^1.13.12",
+    "datatables-bootstrap": "^0.0.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
     "stacktable.js": "^1.0.3"

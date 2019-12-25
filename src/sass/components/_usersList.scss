@@ -1,7 +1,52 @@
 .usersList {
   .usersTable {
+    width: 100%;
     &.responsive {
       display: none;
+    }
+  }
+}
+
+.dataTables_wrapper {
+  & > .row {
+    width: 100%;
+    &:first-child,
+    &:last-child {
+      padding: 10px 0;
+    }
+  }
+  .dataTables_length label {
+    justify-content: flex-start;
+    select {
+      margin: 0 10px
+    }
+  }
+  .dataTables_info {
+    padding-top: 0 !important;
+  }
+  .dataTables_filter label {
+    justify-content: flex-end;
+  }
+  .paginate_button {
+    padding: 0 10px;
+  }
+  .sorting {
+
+  }
+  .sorting_asc {
+    &:before {
+      display: inline !important;
+    }
+    &:after {
+      display: none !important;
+    }
+  }
+  .sorting_desc {
+    &:before {
+      display: none !important;
+    }
+    &:after {
+      display: inline !important;
     }
   }
 }
@@ -22,6 +67,35 @@
           }
         }
       }
+    }
+  }
+
+  .dataTables_wrapper {
+    & > .row {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      &:first-child,
+      &:last-child {
+        padding: 5px 0;
+        .col-sm-6, .col-sm-5, .col-sm-7 {
+          flex: 0 0 100% !important;
+          max-width:100%;
+        }
+      }
+    }
+    .dataTables_length label {
+      padding: 5px 0;
+      justify-content: space-around;
+    }
+
+    .dataTables_filter label {
+      padding: 5px 0;
+      justify-content: space-around;
+    }
+    .pagination {
+      justify-content: space-around !important;
+      padding: 5px 0;
     }
   }
 }
