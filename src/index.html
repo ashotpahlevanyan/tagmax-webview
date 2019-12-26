@@ -301,13 +301,13 @@
                 <form class="form">
                     <div class="form-row">
                         <div class="form-group col-lg-12">
-                            <input id="fileInput"
-                                   name="fileInput"
-                                   type="file"
-                                   class="file"
-                                   data-show-upload="false"
-                                   data-show-caption="true"
-                                   data-msg-placeholder="Select CSV for upload...">
+<!--                                   data-allowed-file-extensions="\['txt', 'md', 'ini', 'text'\]"-->
+<!--                                   data-show-upload="false"-->
+<!--                                   data-show-caption="true"-->
+<!--                                   data-msg-placeholder="Select CSV for upload..." />-->
+                                <label class="control-label" for="fileInput">Select Alerts File</label>
+                                <input class="form-control string" id="fileInput" type="file" maxlength="255" size="255" name="fileInput" accept=".csv">
+                            </div>
                         </div>
                     </div>
                 </form>

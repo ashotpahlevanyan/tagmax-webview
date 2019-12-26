@@ -32,9 +32,65 @@
 .file-caption-main {
   margin-top: 10px;
   .file-caption.form-control {
+    padding: 8px;
     height: auto;
   }
   .file-caption-name {
     width: 100%;
+  }
+
+  .withIcon {
+    &.btn-sm {
+      padding: 5px;
+      height: 50px;
+    }
+    .fa {
+      vertical-align: middle;
+      margin-top: 2px;
+    }
+    span.hidden-xs {
+      vertical-align: middle;
+    }
+    .glyphicon.glyphicon-folder-open {
+      display: none;
+    }
+    &.browse {
+      font-size: 0;
+    }
+  }
+
+}
+textarea.file-preview-text {
+  width: 100% !important;
+  min-height: 200px !important;
+  resize: none;
+}
+@media (max-width: $screen-xs-max) {
+  .file-caption-main {
+    .file-caption.form-control {
+      border-top-right-radius: 5px !important;
+      border-bottom-right-radius: 0px !important;
+      border-bottom-left-radius: 0px !important;
+    }
+    .withIcon {
+      &.btn-sm {
+        padding: 5px 10px;
+        border-top-right-radius: 0 !important;
+      }
+      &.browse {
+
+      }
+      &.btn-danger {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 0 !important;
+      }
+      &.btn-success {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 5px !important;
+      }
+      span.hidden-xs {
+        display: none !important;
+      }
+    }
   }
 }

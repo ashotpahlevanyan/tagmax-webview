@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap-fileinput/css/fileinput.min.css">
-<link href="css/main.dbcf63e12bb7e59069d4.css" rel="stylesheet"></head>
+<link href="css/main.7ddf78e56a5a08d3aa91.css" rel="stylesheet"></head>
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -301,13 +301,13 @@
                 <form class="form">
                     <div class="form-row">
                         <div class="form-group col-lg-12">
-                            <input id="fileInput"
-                                   name="fileInput"
-                                   type="file"
-                                   class="file"
-                                   data-show-upload="false"
-                                   data-show-caption="true"
-                                   data-msg-placeholder="Select CSV for upload...">
+<!--                                   data-allowed-file-extensions="\['txt', 'md', 'ini', 'text'\]"-->
+<!--                                   data-show-upload="false"-->
+<!--                                   data-show-caption="true"-->
+<!--                                   data-msg-placeholder="Select CSV for upload..." />-->
+                                <label class="control-label" for="fileInput">Select Alerts File</label>
+                                <input class="form-control string" id="fileInput" type="file" maxlength="255" size="255" name="fileInput" accept=".csv">
+                            </div>
                         </div>
                     </div>
                 </form>
