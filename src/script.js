@@ -28,9 +28,9 @@ $(document).ready(function(){
         uploadClass: "btn btn-info btn-sm withIcon",
         cancelClass: "btn btn-secondary btn-sm withIcon",
         uploadLabel: "Upload",
-        removeIcon: "<i class=\"fa fa-trash\"></i> ",
-        uploadIcon: "<i class=\"fa fa-upload\"></i> ",
-        cancelIcon: "<i class=\"fa fa-close\"></i> ",
+        removeIcon: "<i class=\"fas fa-trash-alt\"></i> ",
+        uploadIcon: "<i class=\"fas fa-upload\"></i> ",
+        cancelIcon: "<i class=\"fas fa-window-close\"></i> ",
         allowedPreviewTypes: ["text"],
         allowedPreviewExtensions: ["csv"],
         fileTypeSettings: {

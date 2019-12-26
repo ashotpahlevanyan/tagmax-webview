@@ -1,6 +1,12 @@
 //@import "reset";
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap-select/sass/bootstrap-select";
+@import '~@fortawesome/fontawesome-free/scss/variables';
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/brands";
 
 @import "fonts";
 @import "variables";

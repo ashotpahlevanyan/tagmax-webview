@@ -1,6 +1,9 @@
 .usersList {
   .usersTable {
     width: 100%;
+    .fas, .far {
+      font-size: 25px;
+    }
     &.responsive {
       display: none;
     }
@@ -8,6 +11,7 @@
 }
 
 .dataTables_wrapper {
+
   & > .row {
     width: 100%;
     &:first-child,
