@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-<link href="css/main.2b0f596b488d21eb18b7.css" rel="stylesheet"></head>
+    <link rel="stylesheet" href="../node_modules/bootstrap-fileinput/css/fileinput.min.css">
+<link href="css/main.dbcf63e12bb7e59069d4.css" rel="stylesheet"></head>
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -290,6 +291,24 @@
                     <div class="actions ml-auto text-center">
                         <button type="submit" class="btn btn-secondary btn-lg reset">Reset</button>
                         <button type="submit" class="btn btn-primary btn-lg sendInvitation">Send Invitation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper fileInputWrapper">
+                <h2>File Input</h2>
+                <form class="form">
+                    <div class="form-row">
+                        <div class="form-group col-lg-12">
+                            <input id="fileInput"
+                                   name="fileInput"
+                                   type="file"
+                                   class="file"
+                                   data-show-upload="false"
+                                   data-show-caption="true"
+                                   data-msg-placeholder="Select CSV for upload...">
+                        </div>
                     </div>
                 </form>
             </div>

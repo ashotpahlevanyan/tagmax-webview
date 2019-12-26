@@ -42,6 +42,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "blueimp-file-upload": "^10.6.0",
     "bootstrap": "^4.4.1",
+    "bootstrap-fileinput": "^5.0.8",
     "bootstrap-select": "^1.13.12",
     "datatables-bootstrap": "^0.0.1",
     "jquery": "^3.3.1",

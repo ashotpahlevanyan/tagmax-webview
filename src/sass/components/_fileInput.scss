@@ -1,0 +1,40 @@
+.file-drop-zone {
+  background-color: $colorBrand;
+  @include border-radius(10px);
+  min-height: 200px;
+}
+.file-preview {
+  background-color: $colorWhite;
+  @include border-radius(10px);
+  border: 2px solid $colorBrand;
+  padding: 5px;
+
+  .file-drop-zone-title {
+    font-size: 25px;
+    padding: 5px 10px;
+  }
+  .close.fileinput-remove {
+    font-size: 40px;
+    padding: 0 5px;
+    margin-right: 10px;
+  }
+
+  .file-caption-info {
+    padding: 5px 10px;
+    color: $colorWhite;
+    font-weight: bold;
+  }
+  .file-size-info {
+    padding: 5px 10px;
+  }
+
+}
+.file-caption-main {
+  margin-top: 10px;
+  .file-caption.form-control {
+    height: auto;
+  }
+  .file-caption-name {
+    width: 100%;
+  }
+}
