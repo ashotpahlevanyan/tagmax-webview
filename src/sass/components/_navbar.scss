@@ -5,14 +5,17 @@
     width: 45px;
     height: 40px;
     padding: 3px 2px;
-    .fa-close {
+    .fas {
+      font-size: 28px;
+    }
+    .fa-times {
       display: inline;
     }
     .fa-bars {
       display: none;
     }
     &.collapsed {
-      .fa-close {
+      .fa-times {
         display: none;
       }
       .fa-bars {
